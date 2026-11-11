@@ -43,11 +43,22 @@ fun ListaJogos(
     ) {
         if (inicio) {
             item {
-                Text(
-                    "Campeonatos de jogos e inscrições de equipes.",
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    style = MaterialTheme.typography.bodyLarge
-                )
+                Column(
+                    modifier = Modifier.padding(vertical = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text(
+                        "Bem-vindo ao SeuCamp!",
+                        color = MaterialTheme.colorScheme.primary,
+                        style = MaterialTheme.typography.headlineSmall,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        "Boa sorte nas próximas partidas.",
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                }
             }
         }
         item {
@@ -165,7 +176,7 @@ fun Sobre(modifier: Modifier = Modifier) {
         }
         item {
             Text("Sobre o trabalho", style = MaterialTheme.typography.titleLarge)
-            Text("Projeto Android em Kotlin com Jetpack Compose e banco de dados local com Room, baseado no SeuCamp original em PHP.")
+            Text("Projeto Android desenvolvido em Kotlin com Jetpack Compose e banco de dados local com Room.")
         }
     }
 }
